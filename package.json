@@ -1,5 +1,5 @@
 {
-  "name": "knex",
+  "name": "knex-practice",
   "version": "1.0.0",
   "description": "",
   "main": "test_script.js",
@@ -8,15 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/surfman-k/knex.git"
+    "url": "git+https://github.com/surfman-k/knex-practice.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/surfman-k/knex/issues"
+    "url": "https://github.com/surfman-k/knex-practice/issues"
   },
-  "homepage": "https://github.com/surfman-k/knex#readme",
+  "homepage": "https://github.com/surfman-k/knex-practice#readme",
   "dependencies": {
+    "knex": "^0.14.2",
     "pg": "^7.4.1"
   }
 }
