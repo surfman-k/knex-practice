@@ -14,7 +14,7 @@ client.connect((err) => {
   if (err) {
     return console.error("Connection Error", err);
   }
-  client.query("SELECT * FROM famous_people WHERE last_name = $1",[process.argv[2]], (err, result) => {
+  client.query("SELECT * FROM famous_people WHERE last_name = $1 OR first_name = $1",[process.argv[2]], (err, result) => {
     if (err) {
       return console.error("error running query", err);
     }
