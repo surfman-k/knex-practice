@@ -10,6 +10,7 @@ const knex = require('knex')({
   }
 });
 
+
 knex('famous_people')
 .whereRaw('first_name = ?', process.argv[2])
 .orWhereRaw('last_name = ?', process.argv[2])
@@ -20,6 +21,7 @@ console.log(`Searching...
 Found match under name: ${process.argv[2]}
 ${rows[0].id}: ${rows[0].first_name} ${rows[0].last_name}, born ${rows[0].birthdate}`);
 })
+
 
 .finally(function() {
   knex.destroy();
