@@ -10,6 +10,8 @@ const client = new pg.Client({
   ssl      : settings.ssl
 });
 
+console.log('Searching...');
+
 client.connect((err) => {
   if (err) {
     return console.error("Connection Error", err);
@@ -18,7 +20,8 @@ client.connect((err) => {
     if (err) {
       return console.error("error running query", err);
     }
-    console.log(result.rows); //output: 1
+    console.log('Found match under name: ' + process.argv[2]);
+    console.log(`${result.rows[0].id}: ${result.rows[0].first_name} ${result.rows[0].last_name}, born ${result.rows[0].birthdate}`); 
     client.end();
   });
 });
