@@ -10,7 +10,17 @@ const knex = require('knex')({
   }
 });
 
-knex.select().table('famous_people').asCallback(function(err, rows) {
+knex('famous_people')
+.whereRaw('first_name = ?', process.argv[2])
+.orWhereRaw('last_name = ?', process.argv[2])
+
+.asCallback(function(err, rows) {
   if (err) return console.error(err);
-  console.log(rows);
+console.log(`Searching...
+Found match under name: ${process.argv[2]}
+${rows[0].id}: ${rows[0].first_name} ${rows[0].last_name}, born ${rows[0].birthdate}`);
+})
+
+.finally(function() {
+  knex.destroy();
 });
