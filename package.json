@@ -1,0 +1,19 @@
+{
+  "name": "knex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test_script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surfman-k/knex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/surfman-k/knex/issues"
+  },
+  "homepage": "https://github.com/surfman-k/knex#readme"
+}
