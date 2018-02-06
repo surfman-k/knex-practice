@@ -1,0 +1,4 @@
+settings.json
+.jshintrc
+package-lock.json
+node_modules/

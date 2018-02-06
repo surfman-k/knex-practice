@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/surfman-k/knex/issues"
   },
-  "homepage": "https://github.com/surfman-k/knex#readme"
+  "homepage": "https://github.com/surfman-k/knex#readme",
+  "dependencies": {
+    "pg": "^7.4.1"
+  }
 }
